@@ -108,6 +108,11 @@
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "Business/1.0.0": {
+        "dependencies": {
+          "Core": "1.0.0",
+          "DataAccess": "1.0.0",
+          "Entities": "1.0.0"
+        },
         "runtime": {
           "Business.dll": {}
         }
@@ -121,6 +126,11 @@
         }
       },
       "DataAccess/1.0.0": {
+        "dependencies": {
+          "Core": "1.0.0",
+          "Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.10"
+        },
         "runtime": {
           "DataAccess.dll": {}
         }

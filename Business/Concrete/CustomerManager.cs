@@ -3,11 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
+using Business.Constant;
+using Core.Results;
+using DataAccess.Abstract;
+using Entities.Concrete;
 
 namespace Business.Concrete
 {
-    public class CustomerManager:ICustomerService
+    public class CustomerManager : ICustomerService
     {
-        
+        ICustomerDal _customerDal;
+        public CustomerManager(ICustomerDal customerDal)
+        {
+            _customerDal = customerDal;
+        }
+        public IResult Add(Customer customer)
+        {
+             _customerDal.Add(customer);
+             return new SuccessResult(Messages.AddedMessage);
+        }
+
+        public IResult Delete(Customer customer)
+        {
+            _customerDal.Delete(customer);
+            return new SuccessResult(Messages.DeletedMessage);
+        }
+
+        public IDataResult<Customer> GetById(int id)
+        {
+            var res = _customerDal.Get(c=>c.Id == id);
+            return new SuccessDataResult<Customer>(res,Messages.SuccessListedMessage);
+        }
+
+        public IDataResult<List<Customer>> GetAll()
+        {
+            var res = _customerDal.GetAll();
+            return new SuccessDataResult<List<Customer>>(res,Messages.SuccessListedMessage);
+        }
+
+        public IResult Update(Customer customer)
+        {
+            _customerDal.Update(customer);
+            return new SuccessResult(Messages.UpdatedMessage);
+        }
     }
 }
