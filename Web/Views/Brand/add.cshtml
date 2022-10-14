@@ -1,0 +1,25 @@
+@model Entities.Concrete.Brand
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Marka Kayıt</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-controller="Brand" asp-action="Add" method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Marka Ünvanı:</label>
+                <input asp-for="@Model.BrandName" type="text" class="form-control" id="" placeholder="Müşteri Ünvanı">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </div>
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer bg-primary">
+
+        </div>
+    </form>
+</div>

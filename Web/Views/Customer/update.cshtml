@@ -1,0 +1,38 @@
+@model Entities.Concrete.Customer
+<div class="card card-warning">
+    <div class="card-header">
+        <h3 class="card-title">Müşteri Güncelleme</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-controller="Customer" asp-action="Update" method="post">
+        @Html.HiddenFor(c=>c.Id)
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Müşteri Ünvanı:</label>
+                <input asp-for="@Model.CustomerName" type="text" class="form-control" id="" placeholder="Müşteri Ünvanı">
+            </div>
+            <div class="form-group">
+                <label for="">Vergi Numarası:</label>
+                <input asp-for="@Model.CustomerTaxNumber" type="text" class="form-control" id="" placeholder="Vergi Numarası">
+            </div>
+            <div class="form-group">
+                <label for="">Vergi Dairesi:</label>
+                <input asp-for="@Model.CustomerTaxAdmin" type="text" class="form-control" id="" placeholder="Vergi Dairesi">
+            </div>
+            <div class="form-group">
+                <label for="">Adres:</label>
+                <textarea asp-for="@Model.CustomerAddress" class="form-control" placeholder="Adres"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-warning">Güncelle</button>
+            </div>
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer bg-warning">
+
+        </div>
+    </form>
+</div>

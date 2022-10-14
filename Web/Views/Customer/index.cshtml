@@ -1,2 +1,60 @@
-<h1>Customer</h1>
+@model List<Entities.Concrete.Customer>
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Müşteri Bilgileri</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table class="table table-bordered table-striped text-center">
+            <thead>
+                <tr>
+                    <th style="width: 6%">#</th>
+                    <th>Müşteri Ünvanı</th>
+                    <th>Vergi Numarası</th>
+                    <th>Vergi Dairesi</th>
+                    <th>Adres</th>
+                    <th style="width: 10%">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 1;
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.CustomerName</td>
+                            <td>@item.CustomerTaxNumber</td>
+                            <td>@item.CustomerTaxAdmin</td>
+                            <td>@item.CustomerAddress</td>
+                            <td>
+                                <a href="/musteri-guncelle?id=@item.Id" class="bg-warning text-dark p-2 rounded"><i class="fas fa-pencil"></i></a>
+                                <a href="/musteri-sil?id=@item.Id" style="width: 20px;" class="bg-danger text-dark p-2 rounded"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                }
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>#</th>
+                    <th>Müşteri Ünvanı</th>
+                    <th>Vergi Numarası</th>
+                    <th>Vergi Dairesi</th>
+                    <th>Adres</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer bg-primary">
+
+    </div>
+</div>
+
+
 <a id="add-btn" href="/musteri-ekle" class="btn btn-success">Yeni Müşteri</a>

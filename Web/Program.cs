@@ -1,7 +1,23 @@
+using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//IOC
+builder.Services.AddSingleton<ICustomerService,CustomerManager>();
+builder.Services.AddSingleton<ICustomerDal,EfCustomerDal>();
+
+builder.Services.AddSingleton<IBrandService,BrandManager>();
+builder.Services.AddSingleton<IBrandDal,EfBrandDal>();
+
+builder.Services.AddSingleton<IOrderService,OrderManager>();
+builder.Services.AddSingleton<IOrderDal,EfOrderDal>();
+
 
 var app = builder.Build();
 
