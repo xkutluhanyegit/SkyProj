@@ -3,3 +3,7 @@
     bottom: 70px;
     right: 20px;
 }
+
+.table-scroll{
+    overflow-x: auto;
+}

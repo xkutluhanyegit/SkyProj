@@ -8,6 +8,7 @@ namespace Web.Models
 {
     public class OrderVM:Order
     {
+        public IFormFile photo { get; set; }
         public List<Customer> customers { get; set; }
         public List<Brand> brands { get; set; }
     }

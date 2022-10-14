@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Web.Models;
@@ -44,6 +45,16 @@ namespace Web.Controllers
           ovm.brands = _brandService.GetAll().Data;
           ovm.customers = _customerService.GetAll().Data;
           return View(ovm);
+        }
+        [HttpPost("order-ekle")]
+        public IActionResult Add(Order order)
+        {
+          var res = _orderService.Add(order);
+          if (res.Success)
+          {
+            return RedirectToAction("index","order");
+          }
+          return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -5,11 +5,19 @@ using System.Threading.Tasks;
 using Core.DataAccess.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.Concrete.DTOs;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfOrderDal:EfEntityRepositoryBase<Order,SkyDbContext>,IOrderDal
+    public class EfOrderDal : EfEntityRepositoryBase<Order, SkyDbContext>, IOrderDal
     {
-        
+        public  OrderDetailDto GetOrderDetails()
+        {
+            using (SkyDbContext context = new SkyDbContext())
+            {
+               //Auto Mapper 
+
+            }
+        }
     }
 }

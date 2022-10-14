@@ -4,20 +4,52 @@
         <h3 class="card-title">Order Bilgileri</h3>
     </div>
     <!-- /.card-header -->
-    <div class="card-body">
+    <div class="card-body table-scroll">
         <table class="table table-bordered table-striped text-center">
             <thead>
                 <tr>
                     <th style="width: 6%">#</th>
+                    <th style="width: 4%">Durum</th>
+                    <th>Müşteri</th>
+                    <th>Model</th>
+                    <th>Sipariş Adeti</th>
+                    <th >Kesim Adeti</th>
+                    <th>Üretim Tarihi</th>
+                    <th>Termin</th>
                     <th style="width: 10%">Action</th>
                 </tr>
             </thead>
             <tbody>
-                
+                @{
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>1</td>
+                            <td>@item.status</td>
+                            <td>@item.CustomerId</td>
+                            <td>@item.Model</td>
+                            <td>@item.sCount</td>
+                            <td>@item.kCount</td>
+                            <td>@item.ProductDate</td>
+                            <td>@item.Deadline</td>
+                            <td>
+                                <a href="/musteri-guncelle?id=@item.ID" class="bg-warning text-dark p-2 rounded"><i class="fas fa-pencil"></i></a>
+                                <a href="/musteri-sil?id=@item.ID" style="width: 20px;" class="bg-danger text-dark p-2 rounded"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                }
             </tbody>
             <tfoot>
                 <tr>
                     <th style="width: 6%">#</th>
+                    <th style="width: 4%">Durum</th>
+                    <th>Müşteri</th>
+                    <th>Model</th>
+                    <th style="width: 6%">Sipariş Adeti</th>
+                    <th style="width: 6%">Kesim Adeti</th>
+                    <th>Üretim Tarihi</th>
+                    <th>Termin</th>
                     <th style="width: 10%">Action</th>
                 </tr>
             </tfoot>
