@@ -186,6 +186,33 @@ namespace DataAccess.Migrations
 
                     b.ToTable("orders");
                 });
+
+            modelBuilder.Entity("Entities.Concrete.SecondQuality", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("SQAddDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("SQBrandId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SQCustomerId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("SQModel")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("SQQTY")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("secondQualities");
+                });
 #pragma warning restore 612, 618
         }
     }

@@ -1,0 +1,52 @@
+@model Web.Models.SecondQualityVM
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">2. Kalite Ürün Ekle</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-controller="SecondQuality" asp-action="Add" method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Marka:</label>
+                <select asp-for="@Model.SQBrandId" class="form-control">
+                    <option selected value="0">--Marka Seçin--</option>
+                    @foreach (var item in Model.brands)
+                    {
+                        <option value="@item.id">@item.BrandName</option>
+                    }
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label for="">Model:</label>
+                <input asp-for="@Model.SQModel" type="text" class="form-control" id="" placeholder="2. Kalite Model">
+            </div>
+            <div class="form-group">
+                <label for="">Adet:</label>
+                <input asp-for="@Model.SQQTY" type="number" class="form-control" id="" placeholder="2. Kalite Adet">
+            </div>
+            <div class="form-group">
+                <label for="">Firma:</label>
+                
+                <select asp-for="@Model.SQCustomerId" class="form-control">
+                    <option selected value="0">--Firma Seçin--</option>
+                    @foreach (var item in Model.customers)
+                    {
+                        <option value="@item.Id">@item.CustomerName</option>
+
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </div>
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer bg-primary">
+
+        </div>
+    </form>
+</div>

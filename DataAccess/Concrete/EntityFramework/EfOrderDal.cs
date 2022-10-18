@@ -11,13 +11,9 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfOrderDal : EfEntityRepositoryBase<Order, SkyDbContext>, IOrderDal
     {
-        public  OrderDetailDto GetOrderDetails()
+        public OrderDetailDto GetOrderDetails()
         {
-            using (SkyDbContext context = new SkyDbContext())
-            {
-               //Auto Mapper 
-
-            }
+            throw new NotImplementedException();
         }
     }
 }

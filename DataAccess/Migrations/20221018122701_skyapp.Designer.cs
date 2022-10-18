@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(SkyDbContext))]
-    [Migration("20221014085536_skyapp-orderTbl")]
-    partial class skyapporderTbl
+    [Migration("20221018122701_skyapp")]
+    partial class skyapp
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -187,6 +187,33 @@ namespace DataAccess.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("orders");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.SecondQuality", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("SQAddDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("SQBrandId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SQCustomerId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("SQModel")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("SQQTY")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("secondQualities");
                 });
 #pragma warning restore 612, 618
         }

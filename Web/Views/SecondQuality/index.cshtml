@@ -1,0 +1,59 @@
+@model List<Entities.Concrete.DTOs.SQDetailDto>
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">2.Kalite Ürün Bilgileri</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table class="table table-bordered table-striped text-center">
+            <thead>
+                <tr>
+                    <th style="width: 6%">#</th>
+                    <th>Model</th>
+                    <th>Marka</th>
+                    <th>Adet</th>
+                    <th>Firma</th>
+                    <th style="width: 10%">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 1;
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.Model</td>
+                            <td>@item.BrandName</td>
+                            <td>@item.QTY</td>
+                            <td>@item.CustomerName</td>
+                            <td>
+                                <a href="/ikinci-kalite-guncelle?id=@item.Id" class="bg-warning text-dark p-2 rounded"><i class="fas fa-pencil"></i></a>
+                                <a href="/ikinci-kalite-sil?id=@item.Id" style="width: 20px;" class="bg-danger text-dark p-2 rounded"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                }
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>#</th>
+                    <th>Model</th>
+                    <th>Marka</th>
+                    <th>Adet</th>
+                    <th>Firma</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer bg-primary">
+
+    </div>
+</div>
+
+<a id="add-btn" href="/ikinci-kalite-urun-ekle" class="btn btn-success">Ürün Ekle</a>

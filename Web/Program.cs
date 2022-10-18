@@ -18,6 +18,9 @@ builder.Services.AddSingleton<IBrandDal,EfBrandDal>();
 builder.Services.AddSingleton<IOrderService,OrderManager>();
 builder.Services.AddSingleton<IOrderDal,EfOrderDal>();
 
+builder.Services.AddSingleton<ISecondQualityService,SecondQualityManager>();
+builder.Services.AddSingleton<ISecondQualityDal,EfSecondQualityDal>();
+
 
 var app = builder.Build();
 
