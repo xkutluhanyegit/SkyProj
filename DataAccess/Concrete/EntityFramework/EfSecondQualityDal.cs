@@ -11,6 +11,19 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfSecondQualityDal : EfEntityRepositoryBase<SecondQuality, SkyDbContext>, ISecondQualityDal
     {
+        public SecondQuality GetByModelAndCustomer(string model, int customerID)
+        {
+            using (SkyDbContext context = new SkyDbContext())
+            {
+                var var =  context.Set<SecondQuality>().Where(s=>s.SQModel == model && s.SQCustomerId == customerID).SingleOrDefault();
+                return var;
+            }
+        }
+
+
+
+
+
         // public List<SQDetailDto> GetSQDetails()
         // {
         //     using (SkyDbContext context = new SkyDbContext())

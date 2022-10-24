@@ -11,5 +11,6 @@ namespace DataAccess.Abstract
     public interface ISecondQualityDal:IEntityRepository<SecondQuality>
     {
         List<SQDetailDto> GetSQDetails();
+        SecondQuality GetByModelAndCustomer(string model, int customerID);
     }
 }

@@ -213,6 +213,29 @@ namespace DataAccess.Migrations
 
                     b.ToTable("secondQualities");
                 });
+
+            modelBuilder.Entity("Entities.Concrete.SQCustomer", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("SQCustomerAddress")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SQCustomerName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SQCustomerPhone")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("id");
+
+                    b.ToTable("sQCustomers");
+                });
 #pragma warning restore 612, 618
         }
     }

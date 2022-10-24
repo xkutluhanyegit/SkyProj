@@ -11,7 +11,10 @@ namespace Business.Abstract
     public interface ISecondQualityService
     {
         IResult Add(SecondQuality secondQuality);
+        IResult Update(SecondQuality secondQuality);
         IDataResult<List<SecondQuality>> GetAll();
         IDataResult<List<SQDetailDto>> GetSQDetails();
+        IDataResult<SecondQuality> GetByModelAndCustomer(string model, int customerID);
+
     }
 }

@@ -11,5 +11,7 @@ namespace Web.Models
         
         public List<Brand> brands { get; set; }
         public List<Customer> customers { get; set; }
+        public List<String> models { get; set; }
+        public List<SQCustomer> sqcustomers { get; set; }
     }
 }

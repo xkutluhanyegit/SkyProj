@@ -21,6 +21,9 @@ builder.Services.AddSingleton<IOrderDal,EfOrderDal>();
 builder.Services.AddSingleton<ISecondQualityService,SecondQualityManager>();
 builder.Services.AddSingleton<ISecondQualityDal,EfSecondQualityDal>();
 
+builder.Services.AddSingleton<ISQCustomerService,SQCustomerManager>();
+builder.Services.AddSingleton<ISQCustomerDal,EfSQCustomerDal>();
+
 
 var app = builder.Build();
 

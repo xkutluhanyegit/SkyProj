@@ -1,0 +1,93 @@
+@model Web.Models.SecondQualityVM
+<!--Sepet-->
+<!-- Button trigger modal -->
+
+<button id="shop-btn" type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModal">
+    <i class="fa-solid fa-cart-shopping"></i>
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ürün Sepeti</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary">Onayla</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Form-->
+<div class="card card-danger">
+    <div class="card-header">
+        <h3 class="card-title">2. Kalite Ürün Sat</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-controller="SecondQuality" asp-action="Sell" method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Model:</label>
+                <select asp-for="@Model.SQModel" class="form-control">
+                    <option selected value="0">--Model Seçin--</option>
+                    @for (int i = 0; i < @Model.models.Count; i++)
+                    {
+                        <option value="@Model.models[i].ToString()">@Model.models[i].ToString()</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Firma:</label>
+                <select asp-for="@Model.SQCustomerId" class="form-control">
+                    <option selected value="0">--Firma Seçin--</option>
+                    @foreach (var item in Model.customers)
+                    {
+                        <option value="@item.Id">@item.CustomerName</option>
+
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Adet:</label>
+                <input type="number" class="form-control" id="" placeholder="2. Kalite Model">
+            </div>
+            <div class="form-group">
+                <label for="">Müşteri:</label>
+                <select asp-for="@Model.SQCustomerId" class="form-control">
+                    <option selected value="0">--Müşteri Seçin--</option>
+                    @foreach (var item in Model.sqcustomers)
+                    {
+                        <option value="@item.id">@item.SQCustomerName</option>
+
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="">Açıklama:</label>
+                <textarea class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger">Satış Yap</button>
+            </div>
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer bg-danger">
+
+        </div>
+    </form>
+</div>

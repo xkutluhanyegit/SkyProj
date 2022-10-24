@@ -19,5 +19,6 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Brand> brands { get; set; }
         public DbSet<Order> orders { get; set; }
         public DbSet<SecondQuality> secondQualities { get; set; }
+        public DbSet<SQCustomer> sQCustomers { get; set; }
     }
 }

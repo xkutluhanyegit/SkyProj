@@ -1,0 +1,33 @@
+@model Entities.Concrete.SQCustomer
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">2.Kalite Müşteri Kayıt</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form asp-controller="SQCustomer" asp-action="Add" method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Müşteri Ünvanı:</label>
+                <input asp-for="@Model.SQCustomerName" type="text" class="form-control" id="" placeholder="Müşteri Ünvanı">
+            </div>
+            <div class="form-group">
+                <label for="">Müşteri Telefon:</label>
+                <input asp-for="@Model.SQCustomerPhone" type="tel" class="form-control" id="" placeholder="Müşteri Telefon">
+            </div>
+            <div class="form-group">
+                <label for="">Müşteri Adres:</label>
+                <input asp-for="@Model.SQCustomerAddress" type="text" class="form-control" id="" placeholder="Müşteri Adresi">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </div>
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer bg-primary">
+
+        </div>
+    </form>
+</div>

@@ -1,9 +1,14 @@
 #add-btn{
-    position: fixed;
-    bottom: 70px;
-    right: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#delete-btn{
+    position: absolute;
+    right: 110px;
 }
 
 .table-scroll{
     overflow-x: auto;
 }
+
