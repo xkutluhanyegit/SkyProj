@@ -69,6 +69,12 @@ namespace Web.Controllers
           return View(sqvm);
         }
 
+        public IActionResult getAjaxResult(string sQModel)
+        {
+          
+          return Json(sQModel);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -12,5 +12,6 @@ namespace DataAccess.Abstract
     {
         List<SQDetailDto> GetSQDetails();
         SecondQuality GetByModelAndCustomer(string model, int customerID);
+        
     }
 }

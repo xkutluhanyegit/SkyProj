@@ -8,81 +8,81 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Web
 build_property.RootNamespace = Web
-build_property.ProjectDir = c:\Users\SKY\Desktop\SkyProj\Web\
+build_property.ProjectDir = C:\Users\SKY\Desktop\SkyProj\Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\SKY\Desktop\SkyProj\Web
+build_property.MSBuildProjectDirectory = C:\Users\SKY\Desktop\SkyProj\Web
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Brand/add.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Brand/add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcYWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Brand/index.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Brand/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Brand/update.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Brand/update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcdXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Customer/add.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Customer/add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcYWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Customer/index.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Customer/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Customer/update.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Customer/update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcdXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Home/Index.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Order/add.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Order/add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcYWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Order/index.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Order/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/SecondQuality/add.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/SecondQuality/add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vjb25kUXVhbGl0eVxhZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/SecondQuality/index.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/SecondQuality/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vjb25kUXVhbGl0eVxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/SecondQuality/sell.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/SecondQuality/sell.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vjb25kUXVhbGl0eVxzZWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Shared/Error.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/Shared/_Layout.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/SQCustomer/add.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/SQCustomer/add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU1FDdXN0b21lclxhZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/SQCustomer/index.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/SQCustomer/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU1FDdXN0b21lclxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/_ViewImports.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/SKY/Desktop/SkyProj/Web/Views/_ViewStart.cshtml]
+[C:/Users/SKY/Desktop/SkyProj/Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
