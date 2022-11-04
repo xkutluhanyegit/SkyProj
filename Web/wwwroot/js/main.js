@@ -27,14 +27,30 @@ $(document).ready(function () {
 
         $.post("/secondquality/getStockQTY", { sQCustomer: sQCustomer, sqModel: sqModel }, "json")
             .done(function (data) {
-                
+
                 console.log(parseInt(data.sqqty));
                 $("#sell-qty").append("<strong>" + parseInt(data.sqqty) + "</strong>");
-                
+
 
             })
             .fail(function (xhr, status, error) {
                 alert("error");
             });
     });
+
+    $("#add-shopping-list").click(function () {
+        $.post("/secondquality/getShoppingListAdd", { name: "hello" }, "json")
+            .done(function (data) {
+
+                console.log(parseInt(data.sqqty));
+                $("#sell-qty").append("<strong>" + parseInt(data.sqqty) + "</strong>");
+
+
+            })
+            .fail(function (xhr, status, error) {
+                alert("error");
+            });
+    });
+
 });
+

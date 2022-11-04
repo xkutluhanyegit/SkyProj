@@ -95,6 +95,14 @@ namespace Web.Controllers
             return Json(res.Data);
         }
 
+        public IActionResult getShoppingListAdd(string name)
+        {
+            
+            return Json("hello");
+        }
+
+
+
         
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
