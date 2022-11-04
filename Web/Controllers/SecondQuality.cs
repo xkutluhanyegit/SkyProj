@@ -71,7 +71,7 @@ namespace Web.Controllers
             return View(sqvm);
         }
 
-        public IActionResult getAjaxResult(string sQModel)
+        public IActionResult getCompanyName(string sQModel)
         {
             using (SkyDbContext context = new SkyDbContext())
             {
@@ -79,17 +79,23 @@ namespace Web.Controllers
                              join s in context.secondQualities
                              on c.Id equals s.SQCustomerId
                              where s.SQModel == sQModel
-                             select new JsonVM
+                             select new
                              {
-                                 id =c.Id,
-                                 CustomerName = c.CustomerName
+                                 c.Id,
+                                 c.CustomerName
                              };
-                
+
                 return Json(result.ToList());
             }
-
-
         }
+
+        public IActionResult getStockQTY(int sQCustomer , string sQModel)
+        {
+            var res = _secondQualityService.GetByModelAndCustomer(sQModel,sQCustomer);
+            return Json(res.Data);
+        }
+
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
