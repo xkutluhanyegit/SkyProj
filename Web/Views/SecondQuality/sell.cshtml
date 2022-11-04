@@ -52,11 +52,6 @@
                 <label for="">Firma:</label>
                 <select id="SQCustomerId" asp-for="@Model.SQCustomerId" class="form-control">
                     <option selected value="0">--Firma Seçin--</option>
-                    @foreach (var item in Model.customers)
-                    {
-                        <option value="@item.Id">@item.CustomerName</option>
-
-                    }
                 </select>
             </div>
             <div class="form-group">

@@ -2,16 +2,16 @@ $(document).ready(function () {
 
     $("#SQModelId").change(function () {
         var sqModel = $("#SQModelId").val();
-        $.post("/secondquality/getAjaxResult", { sqModel: sqModel })
-            .done(function (response) {
-                alert(response);
-                $("#SQCustomerId").empty();
-                $("#SQCustomerId").append("<option value='0'>--Firma Seçin--</option>");
 
-                // $.each(msg.d, function (i) {
-                //     $("#dropdownlist").append("<option value='" + this.adres + "'>" + this.site + "</option>");
-                // });
+        $("#SQCustomerId").empty();
+        $("#SQCustomerId").append("<option value='0'>--Firma Seçin--</option>");
 
+        $.post("/secondquality/getAjaxResult", { sqModel: sqModel }, "json")
+            .done(function (data) {
+                for (let index = 0; index < data.length; index++) {
+                    $("#SQCustomerId").append("<option value='" + data[index].id + "'>" + data[index].customerName + "</option>");
+                    
+                }
             })
             .fail(function (xhr, status, error) {
                 alert("error");

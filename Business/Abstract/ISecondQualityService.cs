@@ -12,9 +12,10 @@ namespace Business.Abstract
     {
         IResult Add(SecondQuality secondQuality);
         IResult Update(SecondQuality secondQuality);
+        IDataResult<List<SecondQuality>> GetByModel(string model);
         IDataResult<List<SecondQuality>> GetAll();
         IDataResult<List<SQDetailDto>> GetSQDetails();
-        IDataResult<SecondQuality> GetByModelAndCustomer(string model, int customerID);
+        IDataResult<SecondQuality> GetByModelAndCustomer(string model, int customerID); //Add 
 
     }
 }

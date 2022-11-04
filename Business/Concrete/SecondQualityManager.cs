@@ -40,6 +40,12 @@ namespace Business.Concrete
             return new SuccessDataResult<List<SecondQuality>>(res,Messages.SuccessListedMessage);
         }
 
+        public IDataResult<List<SecondQuality>> GetByModel(string model)
+        {
+            var res = _secondQualityDal.GetByModel(model);
+            return new SuccessDataResult<List<SecondQuality>>(res);
+        }
+
         public IDataResult<SecondQuality> GetByModelAndCustomer(string model, int customerID)
         {
             var res = _secondQualityDal.GetByModelAndCustomer(model,customerID);

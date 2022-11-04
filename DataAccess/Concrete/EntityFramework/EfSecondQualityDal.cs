@@ -19,7 +19,14 @@ namespace DataAccess.Concrete.EntityFramework
                 return var;
             }
         }
-
+        
+        public List<SecondQuality> GetByModel(string model){
+            using (SkyDbContext context = new SkyDbContext())
+            {
+                var res = context.Set<SecondQuality>().Where(s=>s.SQModel == model).ToList();
+                return res;
+            }
+        }
 
 
 

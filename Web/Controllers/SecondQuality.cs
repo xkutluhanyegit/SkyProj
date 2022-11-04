@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Web.Models;
 using Entities.Concrete;
+using DataAccess.Concrete.EntityFramework;
+
 
 namespace Web.Controllers
 {
@@ -18,9 +20,9 @@ namespace Web.Controllers
         ICustomerService _customerService;
         IBrandService _brandService;
         ISecondQualityService _secondQualityService;
-        ISQCustomerService  _sQCustomerService;
+        ISQCustomerService _sQCustomerService;
 
-        public SecondQuality(ILogger<SecondQuality> logger, ICustomerService customerService, IBrandService brandService, ISecondQualityService secondQualityService,ISQCustomerService  sQCustomerService)
+        public SecondQuality(ILogger<SecondQuality> logger, ICustomerService customerService, IBrandService brandService, ISecondQualityService secondQualityService, ISQCustomerService sQCustomerService)
         {
             _logger = logger;
             _customerService = customerService;
@@ -63,16 +65,30 @@ namespace Web.Controllers
         [HttpGet("ikinci-kalite-urun-sat")]
         public IActionResult Sell()
         {
-          sqvm.customers = _customerService.GetAll().Data;
-          sqvm.models = _secondQualityService.GetAll().Data.Select(s=>s.SQModel).Distinct().ToList();
-          sqvm.sqcustomers = _sQCustomerService.GetAll().Data;
-          return View(sqvm);
+            sqvm.customers = _customerService.GetAll().Data;
+            sqvm.models = _secondQualityService.GetAll().Data.Select(s => s.SQModel).Distinct().ToList();
+            sqvm.sqcustomers = _sQCustomerService.GetAll().Data;
+            return View(sqvm);
         }
 
         public IActionResult getAjaxResult(string sQModel)
         {
-          
-          return Json(sQModel);
+            using (SkyDbContext context = new SkyDbContext())
+            {
+                var result = from c in context.customers
+                             join s in context.secondQualities
+                             on c.Id equals s.SQCustomerId
+                             where s.SQModel == sQModel
+                             select new JsonVM
+                             {
+                                 id =c.Id,
+                                 CustomerName = c.CustomerName
+                             };
+                
+                return Json(result.ToList());
+            }
+
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
