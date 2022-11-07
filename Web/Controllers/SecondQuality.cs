@@ -30,6 +30,7 @@ namespace Web.Controllers
             _brandService = brandService;
             _secondQualityService = secondQualityService;
             _sQCustomerService = sQCustomerService;
+            List<SecondQualitySell> shopList = new List<SecondQualitySell>();
         }
 
         [HttpGet("ikinci-kalite")]
@@ -96,12 +97,9 @@ namespace Web.Controllers
             return Json(res.Data);
         }
 
-        public List<SecondQualitySell> ShopList = new List<SecondQualitySell>();
         public IActionResult getShoppingListAdd(SecondQualitySell secondQualitySell)
         {
-            
-            ShopList.Add(secondQualitySell);
-            return Json(ShopList);
+            return Json("a");
         }
 
 

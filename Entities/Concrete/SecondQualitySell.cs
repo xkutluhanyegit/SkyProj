@@ -7,11 +7,17 @@ namespace Entities.Concrete
 {
     public class SecondQualitySell
     {
+        public SecondQualitySell()
+        {
+            ShopList = new List<SecondQualitySell>();
+        }
         public int id { get; set; }
         public string model { get; set; }
         public int CustomerId { get; set; }
         public int QTY { get; set; }
         public int SQCustomerId { get; set; }
         public string Desc { get; set; }
+
+        public List<SecondQualitySell> ShopList { get; set; }
     }
 }
