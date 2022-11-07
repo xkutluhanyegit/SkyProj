@@ -13,6 +13,7 @@ using DataAccess.Concrete.EntityFramework;
 
 namespace Web.Controllers
 {
+    
     public class SecondQuality : Controller
     {
         SecondQualityVM sqvm = new SecondQualityVM();
@@ -95,10 +96,12 @@ namespace Web.Controllers
             return Json(res.Data);
         }
 
-        public IActionResult getShoppingListAdd(string name)
+        public List<SecondQualitySell> ShopList = new List<SecondQualitySell>();
+        public IActionResult getShoppingListAdd(SecondQualitySell secondQualitySell)
         {
             
-            return Json("hello");
+            ShopList.Add(secondQualitySell);
+            return Json(ShopList);
         }
 
 

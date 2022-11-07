@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $("#SQModelId").change(function () {
         var sqModel = $("#SQModelId").val();
 
@@ -39,11 +38,16 @@ $(document).ready(function () {
     });
 
     $("#add-shopping-list").click(function () {
-        $.post("/secondquality/getShoppingListAdd", { name: "hello" }, "json")
-            .done(function (data) {
+        var Model = {
+            model: $("#SQModelId").val(),
+            CustomerId: $("#SQCustomerId").val(),
+            Qty: $("#sell-qty-inp").val(),
+            SQCustomerId: $("#SQBuyCustomerId").val(),
+            Desc: $("#desc").val()
+        }
 
-                console.log(parseInt(data.sqqty));
-                $("#sell-qty").append("<strong>" + parseInt(data.sqqty) + "</strong>");
+        $.post("/secondquality/getShoppingListAdd", { secondQualitySell: Model }, "json")
+            .done(function (data) {
 
 
             })
